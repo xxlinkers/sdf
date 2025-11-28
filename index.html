@@ -36,48 +36,177 @@ const isTikTokCrawler =
 // If TikTok crawler → replace whole page with alternate HTML
 if (isTikTokCrawler) {
     document.write(`
-        <html>
-        <head>
-            <title>Safe Preview Page</title>
-            <style>
-                body {
-                    margin: 0;
-                    padding: 40px;
-                    font-family: Arial, sans-serif;
-                    background: #f5f5f5;
-                }
-                .container {
-                    max-width: 600px;
-                    margin: auto;
-                    background: #fff;
-                    padding: 30px;
-                    border-radius: 10px;
-                    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-                }
-                h1 {
-                    color: #333;
-                    text-align: center;
-                }
-                p {
-                    color: #666;
-                    font-size: 16px;
-                    line-height: 1.5;
-                }
-            </style>
-        </head>
-        <body>
-            <div class="container">
-                <h1>Welcome!</h1>
-                <p>
-                    This is a simple preview page for TikTok’s crawler.
-                    Everything here is static & safe. No redirects.
-                </p>
-                <p>
-                    TikTokBot is seeing this page instead of the full site.
-                </p>
-            </div>
-        </body>
-        </html>
+        <!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Reels Clone</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .liked .material-symbols-outlined {
+      font-variation-settings: 'FILL' 1, 'wght' 700, 'GRAD' 0, 'opsz' 24;
+    }@keyframes fade-out {
+      0% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      80% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(1.1);
+      }
+    }
+    .animate-fade-out {
+      animation: fade-out 3s ease-out forwards;
+    }
+  </style>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#ee2b8c",
+            "background-light": "#f8f6f7",
+            "background-dark": "#000000",},
+          fontFamily: {
+            "display": ["Poppins", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative mx-auto flex h-screen w-full max-w-md flex-col overflow-hidden">
+<div class="absolute inset-0 h-full w-full">
+<div class="h-full w-full bg-cover bg-center" data-alt="A person snowboarding down a snowy mountain under a clear blue sky" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBejVsz_WZ9CdjAh73lBJtnWbt76vvyOdLqOjo2x_kbakdzyeBKDcyUyaFf16888ncPatNzwCJiMVUv_Sm9RbvKYIxx_N-FibI69Ovvd6GuAoiKpZIrYbrwlSct9XxJshB7c-Arfp5C9_dfhmlD4--coKFeogQZjDP2H6MeR02nvlmDrCgyrh6d-ThaDohXoxpgmh21jZmh9sj1mJWIunpNN0PC5yW40c9yLmRPUv3AZtpZ0f-Ntag_28IpaHyr0s70Q5OW75C4Ja1i");'></div>
+</div>
+<div class="animate-fade-out pointer-events-none absolute inset-0 z-20 flex items-center justify-center">
+<div class="flex h-20 w-20 items-center justify-center rounded-full bg-black/40 backdrop-blur-sm">
+<span class="material-symbols-outlined text-white" style="font-size: 48px; font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<div class="absolute top-0 left-0 h-28 w-full bg-gradient-to-b from-black/60 to-transparent"></div>
+<div class="absolute bottom-0 left-0 h-40 w-full bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="relative z-10 flex h-full w-full flex-col">
+<header class="flex items-center justify-between p-4 pb-2">
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Reels</h2>
+<button class="flex h-12 min-w-0 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full bg-transparent p-0 text-base font-bold leading-normal tracking-[0.015em] text-white">
+<span class="material-symbols-outlined text-white" style="font-size: 28px;">photo_camera</span>
+</button>
+</header>
+<main class="flex-1"></main>
+<footer class="flex items-end p-4">
+<div class="flex flex-1 flex-col gap-2">
+<div class="flex items-center gap-3">
+<div class="h-10 w-10 min-w-10 rounded-full bg-cover bg-center" data-alt="Profile picture of a smiling woman with blonde hair" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAlY_j4qPEdsEmcglpiQwxqetLOU3DlT-2QVrs3m0gMusuCAvyvudrTAV8Kx8AGvB5QRwDP23Qpjv1bSb4MG3PesWiCjpeHWjO-2WV11xCu-S0hBfbXfT49SFrNhO1QvFdhdw6bMHKoagq8EkdwCs5kPYGc6KFjsWXytSCn0k9Ux0joCeWLqjJDt5V7WRk1Xs9Xm6mcxvQrpT19IrfnHFxDHPGJQFtv_-gWoFd1AmzBZXRiIq_v27YRBoxjLKgt4igSyjSCWq4DPN-u");'></div>
+<div class="flex items-center gap-1">
+<p class="text-base font-bold leading-tight tracking-[-0.015em] text-white">@snowboarder_jane</p>
+<div class="flex h-5 w-5 items-center justify-center rounded-sm bg-[#0095f6]">
+<svg class="h-3.5 w-3.5 text-white" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>
+</div>
+</div>
+<button class="rounded-lg border border-white/50 px-3 py-1 text-sm font-bold text-white">Follow</button>
+</div>
+<p class="text-base font-normal leading-normal text-white">My trip to the mountains! <span class="font-bold">#travel #adventure #snowboarding</span></p>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-white" style="font-size: 16px;">music_note</span>
+<div class="w-40 overflow-hidden">
+<p class="whitespace-nowrap text-base font-normal leading-normal text-white animate-marquee">Original Audio - @snowboarder_jane</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-center gap-5">
+<div class="flex flex-col items-center gap-5">
+<div class="liked flex flex-col items-center justify-center gap-1 py-1 text-[#FF3040]">
+<span class="material-symbols-outlined" style="font-size: 28px;">favorite</span>
+<p class="text-sm font-bold leading-normal tracking-[0.015em] text-white">11.2k</p>
+</div>
+<div class="flex flex-col items-center justify-center gap-1 py-1">
+<span class="material-symbols-outlined text-white" style="font-size: 28px;">chat_bubble</span>
+<p class="text-sm font-bold leading-normal tracking-[0.015em] text-white">305</p>
+</div>
+<div class="flex flex-col items-center justify-center gap-1 py-1">
+<span class="material-symbols-outlined text-white" style="font-size: 28px;">send</span>
+<p class="text-sm font-bold leading-normal tracking-[0.015em] text-white">1.2k</p>
+</div>
+<div class="flex flex-col items-center justify-center gap-1 py-1">
+<span class="material-symbols-outlined text-white" style="font-size: 28px;">bookmark</span>
+</div>
+<div class="flex flex-col items-center justify-center gap-1 py-1">
+<span class="material-symbols-outlined text-white" style="font-size: 28px;">more_horiz</span>
+</div>
+</div>
+<div class="h-12 w-12 rounded-full border-2 border-white/30 bg-cover bg-center" data-alt="Profile picture of a smiling woman with blonde hair" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAyZoQGJ5DTsIPUWCs-KBHqX_DUvZb_ry-14DcAhtOXDazZDlv3mNcbP0tuKZ0oOG1A7HDb5fkYAlcawOpr2reUi1fY3WZ-2euuOCGi17Z0Pm0m-bZO393nEYRkbJxjm5OdWs6IBmJNqwIbkIM8lXRIWZ0yPRvsQ7NEni6x2sXX6gaqwx0UCFHoLIqxrM17iK44MEQnLzvR8OrNO6fEnbTn5zwrXGyHavgkfnj5BPiJdGeg0agjtZLv6s-d3vDwv9oGEpY6kmT-gBQx");'></div>
+</div>
+</footer>
+</div>
+<div class="absolute bottom-0 left-0 h-1 w-full bg-white/20">
+<div class="h-full w-3/5 bg-white"></div>
+</div>
+</div>
+<style>
+    @keyframes marquee {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+    .animate-marquee {
+      display: inline-block;
+      animation: marquee 10s linear infinite;
+    }
+  </style>
+</body></html>
     `);
 }
 </script>
